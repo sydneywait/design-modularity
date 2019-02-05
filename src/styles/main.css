@@ -1,0 +1,30 @@
+body{
+    background: lightgreen;
+
+}
+
+
+#park-cards{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+
+.card{
+    position: relative;
+    border: solid #102b17 1px;
+    width: 20%;
+    padding: 1.5em;
+    margin: 1em;
+    box-shadow: 3px 5px #276837;
+    border-radius: 20px;
+
+}
+
+.btn-save{
+
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+}
