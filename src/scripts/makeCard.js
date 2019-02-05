@@ -1,3 +1,18 @@
+/////  Function to create an object with information from each park
+const makeParkObject = (object, features) => {
+
+  // build an object using data pulled from JSON
+  let parkObject =
+  {
+      "name": object.park_name,
+      "size": `${object.acres} acres`,
+      "features": features,
+      "address": `${object.mapped_location_address}, ${object.mapped_location_city}, ${object.mapped_location_state}`
+
+  }
+  return parkObject;
+}
+
 const makeCard = (parkObject) => {
 
 return `<div class="card">

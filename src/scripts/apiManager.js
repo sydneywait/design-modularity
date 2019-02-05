@@ -1,6 +1,6 @@
 
-// const parkManager = () => {
-fetch("https://data.nashville.gov/resource/xbru-cfzi.json")
+const searchParks = searchParam => {
+fetch(`https://data.nashville.gov/resource/xbru-cfzi.json?${searchParam}=Yes`)
     .then(parks => parks.json())
     .then(parsedParks => {
         // console.log(parsedParks)
@@ -26,22 +26,10 @@ fetch("https://data.nashville.gov/resource/xbru-cfzi.json")
 
     }
     )
-// }
-
-/////  Function to create an object with information from each park
-const makeParkObject = (object, features) => {
-
-    // build an object using data pulled from JSON
-    let parkObject =
-    {
-        "name": object.park_name,
-        "size": `${object.acres} acres`,
-        "features": features,
-        "address": `${object.mapped_location_address}, ${object.mapped_location_city}, ${object.mapped_location_state}`
-
-    }
-    return parkObject;
 }
+
+
+
 
 ////Function to get amenities in the features array and turn it into a string
 
